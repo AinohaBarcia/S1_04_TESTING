@@ -17,7 +17,7 @@ public class Dni {
         return numDNI;
     }
 
-    public char calcularLetra(int numDni){
+    public static char calcularLetra(int numDni){
 
         String caracteres="TRWAGMYFPDXBNJZSQVHLCKE";
         int resto;

@@ -8,24 +8,18 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class OutOfBoundsTest {
     @Test
-
     void isExceptionOutOfBoundsRunCorrect() {
 
         var outOfBounds = new OutOfBounds();
 
         ArrayList<String> nameList = new ArrayList<>();
         nameList.add("Carla");
-        nameList.add("Maria");
-        nameList.add("Pedro");
+        nameList.add("Eyren");
+        nameList.add("Emma");
+        nameList.add("Alana");
 
-
-        try {
+        assertThrows(IndexOutOfBoundsException.class, () -> {
             outOfBounds.getElementAtIndex(nameList, 10);
-        } catch (IndexOutOfBoundsException e) {
-
-            return;
-        }
-        throw new AssertionError("No se ha lanzado IndexOutOfBoundsException");
+        });
     }
-
 }
